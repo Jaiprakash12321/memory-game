@@ -1,0 +1,199 @@
+/* General styling for the game board */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the content vertically */
+  align-items: center;     /* Centers the content horizontally */
+  padding: 20px;
+  margin: 20px;
+  background-color: #f8f8f8; /* Background color inside the border */
+  border: 5px solid #cccccc; /* Outer border around the entire game board */
+  border-radius: 15px; /* Rounded corners for the outer container */
+  box-sizing: border-box;
+  width: 100%; /* Full width */
+  max-width: 900px; /* Optional: Set max width to prevent the board from getting too wide */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Information section styling */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info label,
+.info p,
+.info button {
+  margin: 5px;
+}
+
+/* Card container grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Ensures the cards are responsive */
+  grid-gap: 20px; /* Uniform gap between the cards */
+  justify-items: center; /* Centers each card within its grid cell */
+  align-items: center;
+  padding: 20px; /* Padding around the grid container for consistent spacing */
+  margin: 20px auto; /* Center the grid container and apply margins to the top and bottom */
+  border: 5px solid #cccccc; /* Border around the grid */
+  border-radius: 15px; /* Rounded corners for the grid border */
+  background-color: #baa9a9; /* Light mode background */
+  width: 100%;
+  max-width: 800px; /* Maximum width for the container */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+/* Dark Mode - Card Container */
+body.dark-mode .card-container {
+  background-color: #2a2a3e; /* Dark background color for the card container */
+  border-color: #444444; /* Darker border for the card container */
+}
+
+
+/* Cards */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .card-container {
+    max-width: 90%;
+    gap: 5px;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    gap: 4px;
+  }
+
+  .card {
+    font-size: 1rem;
+  }
+
+  .popup {
+    width: 90%;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode (default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1e1e2f;
+  color: #e0e0e0;
+}
+
+/* GameBoard Container */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  border: 5px solid #cccccc; /* Default border color */
+  border-radius: 15px; /* Rounded corners */
+  background-color: #f8f8f8; /* Light background for the game area */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode - GameBoard */
+body.dark-mode .game-board {
+  border-color: #444444; /* Darker border for dark mode */
+  background-color: #2a2a3e; /* Dark background for the game area */
+}
+
+/* Additional styling for responsive design */
+.card-container {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Dark Mode - Buttons */
+body.dark-mode button {
+  background-color: #333;
+}
+
+body.dark-mode button:hover {
+  background-color: #555;
+}

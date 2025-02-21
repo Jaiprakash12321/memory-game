@@ -1,0 +1,48 @@
+.leaderboard-page {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 20ch;
+  }
+  
+  .leaderboard-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .leaderboard-page ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .leaderboard-page li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  .leaderboard-page p {
+    font-size: 1.2rem;
+    color: gray;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
